@@ -1,2 +1,2 @@
 # EducationalTasks
-Some small projects to show my skills :)
+Some small projects on different themes for educational purposes
