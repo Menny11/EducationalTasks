@@ -5,18 +5,15 @@ SDIR=src
 CC=g++
 
 # compiler flags 
-CPPFLAGS=-g -Wall -Wextra -pthread -std=c++14 -O0
+CPPFLAGS=-g -Wall -Wextra -Wpedantic -pthread -std=c++14
 
 # make targets
 all: semaphPthreads
 
-semaphPthreads: semaphMain.o
-	$(CC) $(CPPFLAGS) semaphMain.o -o semaphPthreads
-
-semaphMain.o:
-	$(CC) $(CPPFLAGS) -c $(SDIR)/semaphMain.cpp $(SDIR)/semaphMain.h
+semaphPthreads: 
+	$(CC) $(CPPFLAGS) $(SDIR)/semaphMain.cpp -o semaphPthreads
 
 clean:
-	rm -rf *.o semaphPthreads
+	rm -rf semaphPthreads
 
 
